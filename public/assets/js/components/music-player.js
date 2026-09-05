@@ -5,12 +5,25 @@ export function setupMusicPlayer(root) {
 
   if (!button || !icon || !audio) return;
 
+  function setPlayingState(isPlaying) {
+    root.classList.toggle("is-playing", isPlaying);
+    icon.textContent = isPlaying ? "Pause" : "Play";
+    button.setAttribute("aria-pressed", String(isPlaying));
+    button.setAttribute(
+      "aria-label",
+      isPlaying ? "Pausar trilha Peaceful ambient" : "Tocar trilha Peaceful ambient",
+    );
+  }
+
+  function playTrack() {
+    return audio.play().catch(() => {
+      setPlayingState(false);
+    });
+  }
+
   button.addEventListener("click", () => {
     if (audio.paused) {
-      audio.play().catch(() => {
-        root.classList.remove("is-playing");
-        icon.textContent = "Play";
-      });
+      playTrack();
       return;
     }
 
@@ -18,16 +31,12 @@ export function setupMusicPlayer(root) {
   });
 
   audio.addEventListener("play", () => {
-    root.classList.add("is-playing");
-    icon.textContent = "Pause";
-    button.setAttribute("aria-pressed", "true");
-    button.setAttribute("aria-label", "Pausar trilha Peaceful ambient");
+    setPlayingState(true);
   });
 
   audio.addEventListener("pause", () => {
-    root.classList.remove("is-playing");
-    icon.textContent = "Play";
-    button.setAttribute("aria-pressed", "false");
-    button.setAttribute("aria-label", "Tocar trilha Peaceful ambient");
+    setPlayingState(false);
   });
+
+  playTrack();
 }
