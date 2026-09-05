@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Homepage da psicologa com apresentacao, abordagem e chamada para contato."
+    >
+    <title>Psicologa | Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Crafty Girls", "cursive"],
+              sans: ["Montserrat", "ui-sans-serif", "system-ui"],
+            },
+            colors: {
+              cream: "#fffaf0",
+              honey: "#edd9a3",
+              ink: "#26231d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/app.css">
+  </head>
+  <body>
+    <div class="page-background" aria-hidden="true"></div>
+
+    <main class="homepage-shell">
+      <nav class="homepage-nav" aria-label="Navegacao secundaria">
+        <a class="homepage-back-link" href="/">Voltar aos links</a>
+      </nav>
+
+      <section class="homepage-hero" data-component="homepage-hero" aria-labelledby="homepage-title">
+        <p class="profile-panel__eyebrow">Psicologia brasileira</p>
+        <h1 id="homepage-title">Dra. Ana Clara</h1>
+        <p>
+          Um espaco de escuta para acolher historias, fortalecer recursos emocionais e caminhar com mais presenca.
+        </p>
+      </section>
+
+      <section class="homepage-section" data-component="approach-panel" aria-labelledby="approach-title">
+        <h2 id="approach-title">Abordagem</h2>
+        <p>
+          Atendimento para adultos com foco em cuidado emocional, autonomia e construcao de caminhos possiveis.
+        </p>
+      </section>
+
+      <section class="homepage-section" data-component="contact-panel" aria-labelledby="contact-title">
+        <h2 id="contact-title">Agendamentos</h2>
+        <p>
+          Para conversar sobre horarios, formatos de atendimento e proximos encontros, acesse o WhatsApp.
+        </p>
+        <a class="homepage-action" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+          Chamar no WhatsApp
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

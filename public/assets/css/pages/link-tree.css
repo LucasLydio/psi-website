@@ -1,0 +1,64 @@
+.page-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(237, 217, 163, 0.36) 0 0.16rem, transparent 0.18rem),
+    radial-gradient(circle at 82% 24%, rgba(217, 167, 160, 0.34) 0 0.14rem, transparent 0.16rem),
+    radial-gradient(circle at 50% 86%, rgba(141, 154, 112, 0.24) 0 0.15rem, transparent 0.17rem),
+    linear-gradient(180deg, var(--color-cream-50), var(--color-white));
+  background-size: 6rem 6rem, 7rem 7rem, 8rem 8rem, auto;
+}
+
+.link-tree-shell {
+  display: grid;
+  width: min(100%, 39rem);
+  min-height: 100vh;
+  margin-inline: auto;
+  align-content: center;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-4);
+}
+
+.profile-panel,
+.links-panel {
+  border: 0.0625rem solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-panel);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(0.5rem);
+}
+
+.profile-panel {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+}
+
+.profile-panel__eyebrow {
+  color: var(--color-muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-panel__summary {
+  color: var(--color-muted);
+  font-size: 0.96rem;
+}
+
+.links-panel {
+  padding: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .link-tree-shell {
+    padding-block: var(--space-10);
+  }
+
+  .profile-panel {
+    padding-inline: var(--space-10);
+  }
+}
