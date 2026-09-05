@@ -37,6 +37,4 @@ export function setupMusicPlayer(root) {
   audio.addEventListener("pause", () => {
     setPlayingState(false);
   });
-
-  playTrack();
 }
