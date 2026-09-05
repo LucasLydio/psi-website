@@ -1,0 +1,8 @@
+.env
+.netlify/
+.npm-cache/
+node_modules/
+*.log
+structure.txt
+create_structure.py
+read-projects.py
