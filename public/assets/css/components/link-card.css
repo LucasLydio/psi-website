@@ -97,7 +97,7 @@
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(90deg, rgba(126, 55, 62, 0.94), rgba(126, 55, 62, 0.68), transparent);
+  background: linear-gradient(90deg, rgba(126, 55, 62, 0.94), rgba(126, 55, 62, 0.829), transparent);
 }
 
 .feature-link--image img {
