@@ -6,6 +6,8 @@
   --color-honey-400: #dbc37b;
   --color-sage-400: #8d9a70;
   --color-rose-300: #d9a7a0;
+  --color-rose-500: #9b4b52;
+  --color-rust-500: #bf6840;
   --color-ink: #26231d;
   --color-muted: #696256;
   --color-line: rgba(38, 35, 29, 0.15);
@@ -26,6 +28,7 @@
   --radius-xs: 0.125rem;
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
+  --radius-lg: 1rem;
 
   --shadow-soft: 0 1.25rem 4rem rgba(74, 59, 34, 0.13);
   --transition-fast: 160ms ease;
