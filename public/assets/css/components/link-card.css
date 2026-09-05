@@ -104,6 +104,27 @@
   width: 100%;
 }
 
+.feature-whatsapp {
+  position: relative;
+  overflow: hidden; /* Keeps the pseudo-element inside the button bounds */
+}
+
+.feature-whatsapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  bottom: 0;
+  width: 80px; /* Adjust width to fit your image size */
+  background-image: url("/assets/images/home/instagram.svg"); /* Replace with your image path */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  pointer-events: none; /* Allows clicks to pass through to the link */
+  z-index: 0;
+  opacity: 0.5;
+}
+
 .feature-link--image .feature-link__eyebrow,
 .feature-link--image .feature-link__content span:last-child {
   color: rgba(255, 255, 255, 0.84);
